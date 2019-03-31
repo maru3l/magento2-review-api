@@ -64,5 +64,13 @@ class ProductReview implements ProductReviewInterface
         }
 
         return $reviews;
-    }
+	}
+
+	/**
+     * @inheritdoc
+     */
+	// public function save(ReviewInterface $review, $sku, $customerId = null)
+	// {
+
+	// }
 }
