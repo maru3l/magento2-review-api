@@ -9,15 +9,15 @@
 namespace Divante\ReviewApi\Model;
 
 use Divante\ReviewApi\Api\Data\ReviewInterfaceFactory;
-use Divante\ReviewApi\Api\GetProductReviewsInterface;
+use Divante\ReviewApi\Api\ProductReviewInterface;
 use Magento\Review\Model\ResourceModel\Review\Product\Collection as ReviewCollection;
 use Magento\Review\Model\ResourceModel\Review\Product\CollectionFactory as ReviewCollectionFactory;
 use Divante\ReviewApi\Model\Converter\Review\ToDataModel as ReviewConverter;
 
 /**
- * Class GetProductReviews
+ * Class ProductReview
  */
-class GetProductReviews implements GetProductReviewsInterface
+class ProductReview implements ProductReviewInterface
 {
 
     /**
@@ -31,7 +31,7 @@ class GetProductReviews implements GetProductReviewsInterface
     private $reviewCollectionFactory;
 
     /**
-     * GetProductReviews constructor.
+     * ProductReview constructor.
      *
      * @param ReviewConverter $reviewConverter
      * @param ReviewCollectionFactory $collectionFactory
@@ -47,7 +47,7 @@ class GetProductReviews implements GetProductReviewsInterface
     /**
      * @inheritdoc
      */
-    public function execute($sku)
+    public function getList($sku)
     {
         /** @var ReviewCollection $collection */
         $collection = $this->reviewCollectionFactory->create();

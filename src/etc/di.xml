@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Divante\ReviewApi\Api\Data\ReviewInterface" type="Divante\ReviewApi\Model\Data\Review"/>
     <preference for="Divante\ReviewApi\Api\Data\RatingVoteInterface" type="Divante\ReviewApi\Model\Data\RatingVote"/>
-    <preference for="Divante\ReviewApi\Api\GetProductReviewsInterface" type="Divante\ReviewApi\Model\GetProductReviews"/>
+    <preference for="Divante\ReviewApi\Api\ProductReviewInterface" type="Divante\ReviewApi\Model\ProductReview"/>
     <preference for="Divante\ReviewApi\Api\ReviewRepositoryInterface" type="Divante\ReviewApi\Model\ReviewRepository"/>
     <preference for="Divante\ReviewApi\Model\Review\Command\DeleteByIdInterface" type="Divante\ReviewApi\Model\Review\Command\DeleteById"/>
     <preference for="Divante\ReviewApi\Model\Review\Command\SaveInterface" type="Divante\ReviewApi\Model\Review\Command\Save"/>

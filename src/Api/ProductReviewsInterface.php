@@ -9,9 +9,9 @@
 namespace Divante\ReviewApi\Api;
 
 /**
- * Interface GetProductReviewsInterface
+ * Interface ProductReviewInterface
  */
-interface GetProductReviewsInterface
+interface ProductReviewInterface
 {
     /**
      * Get product reviews.
@@ -19,5 +19,5 @@ interface GetProductReviewsInterface
      * @param string $sku
      * @return \Divante\ReviewApi\Api\Data\ReviewInterface[]
      */
-    public function execute($sku);
+    public function getList($sku);
 }
