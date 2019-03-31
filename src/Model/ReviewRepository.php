@@ -64,10 +64,10 @@ class ReviewRepository implements ReviewRepositoryInterface
     /**
      * @inheritdoc
      */
-    public function save(ReviewInterface $review)
+    public function save(ReviewInterface $review, $customerId = null)
     {
-        return $this->commandSave->execute($review);
-    }
+        return $this->commandSave->execute($review, $customerId);
+	}
 
     /**
      * @inheritdoc

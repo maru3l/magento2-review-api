@@ -22,8 +22,11 @@
     <route url="/V1/reviews" method="POST">
         <service class="Divante\ReviewApi\Api\ReviewRepositoryInterface" method="save"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all"/>
+            <resource ref="self"/>
         </resources>
+        <data>
+          <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
     </route>
     <route url="/V1/reviews/:reviewId" method="DELETE">
         <service class="Divante\ReviewApi\Api\ReviewRepositoryInterface" method="deleteById"/>

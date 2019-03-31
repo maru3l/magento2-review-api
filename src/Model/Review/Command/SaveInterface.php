@@ -18,11 +18,12 @@ interface SaveInterface
 {
     /**
      * @param ReviewInterface $dataModel
+     * @param string|null $customerId
      *
      * @return ReviewInterface
      * @throws ValidationException
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      */
-    public function execute($dataModel);
+    public function execute($dataModel, $customerId = null);
 }

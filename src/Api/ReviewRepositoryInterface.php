@@ -21,12 +21,13 @@ interface ReviewRepositoryInterface
      * It doesn't update/create rating votes
      *
      * @param \Divante\ReviewApi\Api\Data\ReviewInterface $review
+	 * @param string|null $customerId
      *
      * @return \Divante\ReviewApi\Api\Data\ReviewInterface
      * @throws \Magento\Framework\Exception\CouldNotSaveException
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
-    public function save(ReviewInterface $review);
+	public function save(ReviewInterface $review, $customerId = null);
 
     /**
      * Get review by id.

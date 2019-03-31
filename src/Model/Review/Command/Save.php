@@ -82,7 +82,7 @@ class Save implements SaveInterface
     /**
      * @inheritdoc
      */
-    public function execute($dataModel)
+    public function execute($dataModel, $customerId = null)
     {
         $stores = $dataModel->getStores();
 
@@ -92,7 +92,14 @@ class Save implements SaveInterface
 
         if ((null === $dataModel->getId()) && (null === $dataModel->getStoreId())) {
             $dataModel->setStoreId($this->storeManager->getStore()->getId());
-        }
+		}
+
+		if ($customerId) {
+			$dataModel->setCustomerId($customerId);
+			$dataModel->setReviewStatus(2);
+			$dataModel->setReviewType(1);
+			$dataModel->setNickname('bob');
+		}
 
         $validationResult = $this->reviewValidator->validate($dataModel);
 
